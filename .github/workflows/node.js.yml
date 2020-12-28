@@ -13,11 +13,10 @@ jobs:
 
   build:
 
-    runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [12.x, 14.x]
+        runs-on: [ ubuntu-latest, windows-2016 ]
 
     steps:
     - uses: actions/checkout@v2
