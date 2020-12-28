@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          path: main
       - name: npm install and build webpack
         run: |
           npm install
@@ -33,6 +35,8 @@ jobs:
         node-version: [12.x, 14.x]
     steps:
     - uses: actions/checkout@v2
+      with:
+        path: main
     - uses: actions/download-artifact@v2
       with: 
         name: upload artifacts
